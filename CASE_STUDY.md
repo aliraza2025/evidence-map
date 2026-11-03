@@ -1,4 +1,4 @@
-# Evidence Map — product case study
+# Nukta — product case study
 
 Stage: independent prototype.
 

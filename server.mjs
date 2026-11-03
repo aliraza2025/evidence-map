@@ -4,7 +4,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import * as core from './public/core.js';
 import {runExtension} from './extensions.mjs';
 const publicRoot = new URL('./public/', import.meta.url);
-const files = { '/retrieval.js': ['retrieval.js', 'text/javascript'], '/': ['index.html', 'text/html'], '/index.html': ['index.html', 'text/html'], '/style.css': ['style.css', 'text/css'], '/app.js': ['app.js', 'text/javascript'], '/core.js': ['core.js', 'text/javascript'], '/shared.js': ['shared.js', 'text/javascript'] };
+const files = { '/branding.css': ['branding.css', 'text/css'], '/project-cover.webp': ['project-cover.webp', 'image/webp'], '/retrieval.js': ['retrieval.js', 'text/javascript'], '/': ['index.html', 'text/html'], '/index.html': ['index.html', 'text/html'], '/style.css': ['style.css', 'text/css'], '/app.js': ['app.js', 'text/javascript'], '/core.js': ['core.js', 'text/javascript'], '/shared.js': ['shared.js', 'text/javascript'] };
 const MAX_BODY = 128000;
 function send(res, status, body) { res.writeHead(status, { 'Content-Type': 'application/json; charset=utf-8' }); res.end(JSON.stringify(body)); }
 async function jsonBody(req) {

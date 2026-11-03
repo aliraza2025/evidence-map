@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Evidence-first product discovery: exact interview citations, opportunity hypotheses, and explicit RICE assumptions; optional local AI.",
+  "description": "Nukta \u2014 Evidence-led product discovery. An independent Raza Labs prototype by Ali Raza.",
   "author": "Ali Raza",
   "license": "MIT",
   "engines": {

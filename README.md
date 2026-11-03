@@ -1,4 +1,8 @@
-# Evidence Map
+# Nukta
+
+**Evidence-led product discovery · Raza Labs by Ali Raza**
+
+![Concept artwork for Nukta](public/project-cover.webp)
 
 An evidence-first product discovery workbench. Keep interview quotes attached to tentative opportunities, make prioritization assumptions explicit, and export the reasoning together with a proposed experiment.
 
@@ -85,3 +89,7 @@ Exact quote matching does not establish logical support for a hypothesis. Keywor
 Install `requirements.txt` in a local virtual environment and set `PYTHON_BIN` to its Python interpreter before `npm start`. Model weights are downloaded on first use; no paid API is used.
 
 The new retrieval form calls `scripts/retrieve.py`, which uses LlamaIndex and the Apache-2.0 `sentence-transformers/all-MiniLM-L6-v2` model. It returns the original source lines and similarity scores. It does not generate or validate a research conclusion.
+
+## Visual identity
+
+Original AI-generated concept artwork for the Raza Labs collection, matched to Ali Raza’s midnight-purple and pink portfolio studio. The cover is illustrative artwork; the interactive demo shows the actual prototype. Generation prompt: [ARTWORK.md](ARTWORK.md).
