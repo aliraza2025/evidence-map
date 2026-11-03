@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "mode": "keyword",
+  "sources": [
+    {
+      "id": "L001",
+      "participant": "P01",
+      "text": "I lose track of customers when calls come in after closing."
+    },
+    {
+      "id": "L002",
+      "participant": "P02",
+      "text": "Scheduling a second visit means checking three different calendars."
+    },
+    {
+      "id": "L003",
+      "participant": "P03",
+      "text": "I write estimates on paper and cannot explain why two similar houses get different prices."
+    },
+    {
+      "id": "L004",
+      "participant": "P01",
+      "text": "A follow-up reminder would help me call back people who never booked."
+    },
+    {
+      "id": "L005",
+      "participant": "P04",
+      "text": "I need to see which quotes are still waiting for a reply."
+    },
+    {
+      "id": "L006",
+      "participant": "P02",
+      "text": "The calendar changes while I am on the phone with a customer."
+    },
+    {
+      "id": "L007",
+      "participant": "P03",
+      "text": "I want the estimate to show what was included before I send it."
+    },
+    {
+      "id": "L008",
+      "participant": "P04",
+      "text": "We forget to follow up on the old quotes because nobody owns the next step."
+    },
+    {
+      "id": "L009",
+      "participant": "P01",
+      "text": "I would rather review an automated message before it goes to a customer."
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "O1",
+      "title": "Make scheduling inspectable",
+      "hypothesis": "A shared availability view could reduce uncertainty while staff arrange a visit.",
+      "citations": [
+        {
+          "sourceId": "L002",
+          "quote": "Scheduling a second visit means checking three different calendars."
+        },
+        {
+          "sourceId": "L006",
+          "quote": "The calendar changes while I am on the phone with a customer."
+        }
+      ],
+      "assumptions": {
+        "reach": 10,
+        "impact": 1,
+        "confidence": 0.5,
+        "effort": 2
+      },
+      "reviewed": false
+    },
+    {
+      "id": "O2",
+      "title": "Explain the estimate",
+      "hypothesis": "An itemized estimate with an explanation could help staff review and defend a quote.",
+      "citations": [
+        {
+          "sourceId": "L003",
+          "quote": "I write estimates on paper and cannot explain why two similar houses get different prices."
+        },
+        {
+          "sourceId": "L007",
+          "quote": "I want the estimate to show what was included before I send it."
+        }
+      ],
+      "assumptions": {
+        "reach": 10,
+        "impact": 1,
+        "confidence": 0.5,
+        "effort": 2
+      },
+      "reviewed": false
+    },
+    {
+      "id": "O3",
+      "title": "Give follow-up an owner",
+      "hypothesis": "A visible next-action queue could help staff review outstanding leads and quotes.",
+      "citations": [
+        {
+          "sourceId": "L004",
+          "quote": "A follow-up reminder would help me call back people who never booked."
+        },
+        {
+          "sourceId": "L005",
+          "quote": "I need to see which quotes are still waiting for a reply."
+        },
+        {
+          "sourceId": "L008",
+          "quote": "We forget to follow up on the old quotes because nobody owns the next step."
+        }
+      ],
+      "assumptions": {
+        "reach": 10,
+        "impact": 1,
+        "confidence": 0.5,
+        "effort": 2
+      },
+      "reviewed": false
+    },
+    {
+      "id": "O4",
+      "title": "Keep a human in the loop",
+      "hypothesis": "A review queue for after-hours actions could capture demand while preserving staff control.",
+      "citations": [
+        {
+          "sourceId": "L001",
+          "quote": "I lose track of customers when calls come in after closing."
+        },
+        {
+          "sourceId": "L009",
+          "quote": "I would rather review an automated message before it goes to a customer."
+        }
+      ],
+      "assumptions": {
+        "reach": 10,
+        "impact": 1,
+        "confidence": 0.5,
+        "effort": 2
+      },
+      "reviewed": false
+    }
+  ]
+}

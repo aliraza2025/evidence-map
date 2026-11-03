@@ -1,0 +1,9 @@
+P01 | I lose track of customers when calls come in after closing.
+P02 | Scheduling a second visit means checking three different calendars.
+P03 | I write estimates on paper and cannot explain why two similar houses get different prices.
+P01 | A follow-up reminder would help me call back people who never booked.
+P04 | I need to see which quotes are still waiting for a reply.
+P02 | The calendar changes while I am on the phone with a customer.
+P03 | I want the estimate to show what was included before I send it.
+P04 | We forget to follow up on the old quotes because nobody owns the next step.
+P01 | I would rather review an automated message before it goes to a customer.
