@@ -2,8 +2,9 @@ import http from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import * as core from './public/core.js';
+import {runExtension} from './extensions.mjs';
 const publicRoot = new URL('./public/', import.meta.url);
-const files = { '/': ['index.html', 'text/html'], '/index.html': ['index.html', 'text/html'], '/style.css': ['style.css', 'text/css'], '/app.js': ['app.js', 'text/javascript'], '/core.js': ['core.js', 'text/javascript'], '/shared.js': ['shared.js', 'text/javascript'] };
+const files = { '/retrieval.js': ['retrieval.js', 'text/javascript'], '/': ['index.html', 'text/html'], '/index.html': ['index.html', 'text/html'], '/style.css': ['style.css', 'text/css'], '/app.js': ['app.js', 'text/javascript'], '/core.js': ['core.js', 'text/javascript'], '/shared.js': ['shared.js', 'text/javascript'] };
 const MAX_BODY = 128000;
 function send(res, status, body) { res.writeHead(status, { 'Content-Type': 'application/json; charset=utf-8' }); res.end(JSON.stringify(body)); }
 async function jsonBody(req) {
@@ -33,6 +34,12 @@ export function createApp(options = {}) {
     if (req.headers.origin && ![`http://${req.headers.host}`, `https://${req.headers.host}`].includes(req.headers.origin)) return send(res, 403, { error: 'Cross-origin requests are not accepted.' });
     const pathname = new URL(req.url, 'http://localhost').pathname;
     if (pathname === '/api/config' && req.method === 'GET') return send(res, 200, { localAiEnabled: Boolean(config.model), model: config.model || null });
+    if (['/api/retrieve','/api/render'].includes(pathname)) {
+      if(req.method !== 'POST') return send(res,405,{error:'Use POST.'});
+      if(!req.headers['content-type']?.startsWith('application/json')) return send(res,415,{error:'Use JSON.'});
+      try { const payload=await jsonBody(req); return send(res,200,await runExtension(pathname,payload)); }
+      catch(error) { return send(res,400,{error:error.message}); }
+    }
     if (pathname === '/api/assist') {
       if (req.method !== 'POST') return send(res, 405, { error: 'Use POST.' });
       if (!core.prepareAssist || !core.validateAssist) return send(res, 404, { error: 'This tool evaluates imported traces without a model.' });

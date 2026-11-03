@@ -1,0 +1,3 @@
+torch==2.15.0
+transformers==5.22.1
+llama-index-core==0.14.25

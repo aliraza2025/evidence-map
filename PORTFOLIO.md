@@ -1,17 +1,19 @@
 # Portfolio card
 
-Title: Evidence Map
+**Evidence Map**
 
-Category: AI product discovery · Evidence provenance · Prioritization · Local AI
+Category: Product discovery
 
 Stage: Independent prototype
 
 Role: Product design and development, with AI-assisted implementation
 
-Built an evidence-first discovery workbench linking interview quotes to product hypotheses, explicit RICE assumptions, and proposed experiments. Added optional local-model extraction, exact-source validation, operator review, and exports that preserve the reasoning behind prioritization.
+An evidence-first discovery workbench with exact quote validation, editable hypotheses, explicit RICE assumptions, and local LlamaIndex/MiniLM retrieval.
+
+Verification: Local LlamaIndex embedding retrieval.
 
 Repository: https://github.com/aliraza2025/evidence-map
 
-Interactive demo: https://aliraza2025.github.io/evidence-map/
+Demo: https://aliraza2025.github.io/evidence-map/
 
-Use the prototype stage label. Report customer adoption, user research, live model performance, or business impact only after collecting that evidence.
+Scope qualification: Exact quote matching does not establish logical support for a hypothesis. Keyword grouping and model-backed retrieval are different modes. The sample interviews are fictional, and RICE values start as operator assumptions.
